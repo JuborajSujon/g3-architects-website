@@ -68,6 +68,20 @@ img {
   padding: 2rem 0;
 }
 
+.btn-primary {
+  background-color: var(--quaternary-clr);
+  color: var(--white-clr);
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 1.25rem 1.6rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.banner-image {
+  margin-top: 3rem;
+}
+
 /*Header nav section start*/
 header {
   background-color: var(--bg-primary-clr);
@@ -102,44 +116,211 @@ nav {
 
 /*Header nav section end*/
 
+/* Main section start */
+
+/* Feature section start */
+.feature-section {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.feature-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.team-image {
+  border-radius: 0.5rem;
+}
+.section-header .title1 {
+  color: var(--tertiary-clr);
+  font-weight: 500;
+}
+.section-header .title3 {
+  color: var(--quaternary-clr);
+}
+.feature-content {
+  margin-top: 2rem;
+}
+/* Feature section start */
+
+/* Exprerience section start */
+.experience-section {
+  padding: 2rem 2rem 5rem;
+}
+
+.experience-section .section-overflow {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.experience-content {
+  text-align: left;
+}
+
+.experience-content .section-header__experience {
+  border-left: 5px solid var(--quaternary-clr);
+  padding-left: 1.25rem;
+}
+
+.experience-card {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+  padding: 2rem;
+}
+
+.experience-card .card-header {
+  text-align: left;
+}
+
+.experience-card + .experience-card {
+  margin-top: 1rem;
+}
+.experience-image {
+  position: relative;
+}
+.experience-image-bg {
+  position: relative;
+  top: 0;
+  left: 5rem;
+  bottom: 0rem;
+}
+.experience-image__text {
+  text-align: center;
+  padding: 3rem;
+  max-width: 21.5rem;
+  background: var(--quaternary-clr);
+  color: var(--white-clr);
+  border-radius: 8px;
+
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+}
+
+.experience-image__text h3 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4.2rem;
+}
+.experience-image__text p {
+  font-size: 1.575rem;
+  font-weight: 500;
+  line-height: 2.5rem;
+}
+
+/* Exprerience section end */
+
+/* Main section end */
+
 /* Media Qurey */
 
 /* Tablet view start */
 @media screen and (min-width: 576px) {
-  .primary-header {
+  /* Banner section */
+  .banner .primary-header {
     font-size: 4rem;
   }
-  .section-description {
+  .banner .section-description {
     padding: 2rem 1rem;
+  }
+
+  /* Feature section */
+  .feature-image {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* Exprerience section */
+  .experience-image__text {
+    bottom: 3rem;
   }
 }
 /* Tablet view end */
 
 /* Laptop view start */
 @media screen and (min-width: 768px) {
+  /* Banner section */
   nav {
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 2rem;
   }
   .secondary-header__menu {
     margin-top: 0;
     display: flex;
   }
-  .section-description {
-    padding: 2rem;
+  .banner .section-description {
+    padding: 2rem 3rem;
+  }
+
+  /* Feature section */
+  .feature-section {
+    flex-direction: row;
+    padding: 5rem 3rem;
+  }
+  .feature-section-item {
+    width: 50%;
+  }
+  .feature-content {
+    padding-left: 3rem;
+    margin-top: 0;
+  }
+
+  /* Exprerience section */
+  .experience-section .section-overflow {
+    flex-direction: row;
+  }
+  .section-overflow .experience-content {
+    width: 40%;
+    gap: 1rem;
+  }
+  .section-overflow .experience-image {
+    flex-shrink: 0;
+    align-self: flex-start;
+  }
+  .experience-image__text {
+    bottom: -5rem;
   }
 }
 /* Laptop view end */
 
 /* Desktop view start */
 @media screen and (min-width: 992px) {
+  /* Banner section */
   nav {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .section-description {
+  .banner .section-description {
     padding: 2rem 9rem;
+    transition: 1s;
+  }
+  /* Feature section */
+  .feature-section {
+    padding: 5rem;
+  }
+
+  .feature-image {
+    gap: 1.5rem;
+  }
+
+  .feature-content {
+    padding-left: 4.5rem;
   }
 }
 /* Desktop view end */
