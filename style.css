@@ -1,0 +1,130 @@
+/* Import "work sans" font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800;900&display=swap");
+/* General CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-clr: #131313;
+  --secondary-clr: #424242;
+  --tertiary-clr: #727272;
+  --quaternary-clr: #ff900e;
+  --bg-primary-clr: rgba(255, 144, 14, 0.1);
+  --white-clr: #fff;
+  --black-clr: #000;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit; /* no underline */
+}
+
+/* Reusgable CSS Classes */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.primary-header {
+  color: var(--primary-clr);
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 700;
+}
+.secondary-header {
+  color: var(--secondary-clr);
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+}
+.section-header {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-clr);
+}
+
+.section-description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--tertiary-clr);
+}
+
+/*Header nav section start*/
+header {
+  background-color: var(--bg-primary-clr);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 2rem;
+}
+
+.secondary-header__menu {
+  flex: 1;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+.secondary-header__menu .item {
+  padding: 0.5rem 1.25rem;
+  border-radius: 5px;
+}
+
+.secondary-header__menu .item:hover {
+  background-color: rgba(255, 143, 14, 0.15);
+}
+
+/*Header nav section end*/
+
+/* Media Qurey */
+
+/* Large Device */
+@media only screen and (max-width: 1200px) {
+  /*nav section*/
+}
+
+/* Desktop Device */
+@media only screen and (max-width: 992px) {
+  /*nav section*/
+  nav {
+    flex-direction: column;
+  }
+}
+
+/* Tablet Device */
+@media only screen and (max-width: 767px) {
+  /*nav section*/
+  nav {
+    flex-direction: column;
+  }
+}
+
+/* Mobile Device */
+@media only screen and (max-width: 576px) {
+  /*nav section*/
+  nav {
+    flex-direction: column;
+  }
+
+  .secondary-header__menu {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
