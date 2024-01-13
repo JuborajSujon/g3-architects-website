@@ -29,6 +29,13 @@ a {
   text-decoration: inherit; /* no underline */
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 /* Reusgable CSS Classes */
 .container {
   max-width: 1440px;
@@ -38,7 +45,7 @@ a {
 .primary-header {
   color: var(--primary-clr);
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 .secondary-header {
@@ -58,6 +65,7 @@ a {
   font-size: 1rem;
   font-weight: 400;
   color: var(--tertiary-clr);
+  padding: 2rem 0;
 }
 
 /*Header nav section start*/
@@ -83,6 +91,14 @@ nav {
 .secondary-header__menu .item:hover {
   background-color: rgba(255, 143, 14, 0.151);
 }
+.banner {
+  text-align: center;
+  padding: 2rem;
+}
+.section-description__banner {
+  text-align: justify;
+  text-align-last: center;
+}
 
 /*Header nav section end*/
 
@@ -90,6 +106,12 @@ nav {
 
 /* Tablet view start */
 @media screen and (min-width: 576px) {
+  .primary-header {
+    font-size: 4rem;
+  }
+  .section-description {
+    padding: 2rem 1rem;
+  }
 }
 /* Tablet view end */
 
@@ -103,6 +125,9 @@ nav {
     margin-top: 0;
     display: flex;
   }
+  .section-description {
+    padding: 2rem;
+  }
 }
 /* Laptop view end */
 
@@ -111,6 +136,10 @@ nav {
   nav {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .section-description {
+    padding: 2rem 9rem;
   }
 }
 /* Desktop view end */
